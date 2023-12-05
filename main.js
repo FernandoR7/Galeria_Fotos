@@ -13,12 +13,12 @@ $('form').on('submit', function(e){
 
     const novoItem = $('<li></li>');
 
-    // Append image to the new list item
+    // Anexar imagem ao novo item da lista
     const novaImagem = $(`<img src="${enderecoDaNovaImagem}" />`);
     console.log('Nova Imagem HTML:', novaImagem[0].outerHTML);
     novaImagem.appendTo(novoItem);
 
-    // Append overlay link to the new list item
+    // Anexar link de sobreposição ao novo item da lista
     const overlayLink = $(
         `<div class="overlay-imagem-link">
             <a href="${enderecoDaNovaImagem}" target="_blank" title="Ver imagem em tamanho real">
@@ -29,7 +29,10 @@ $('form').on('submit', function(e){
     console.log('Overlay Link HTML:', overlayLink[0].outerHTML);
     overlayLink.appendTo(novoItem);
 
-    // Append the new list item to the unordered list
+    // Anexe o novo item da lista à lista não ordenada
     console.log('Novo Item HTML:', novoItem[0].outerHTML);
     novoItem.appendTo('ul');
 });
+
+
+console.log('Endereco da Nova Imagem:', enderecoDaNovaImagem);
