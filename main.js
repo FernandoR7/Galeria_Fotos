@@ -11,7 +11,7 @@ $('form').on('submit', function(e){
     const enderecoDaNovaImagem = $('#endereco-imagem-nova').val();
     console.log('Endereco da Nova Imagem:', enderecoDaNovaImagem);
 
-    const novoItem = $('<li></li>');
+    const novoItem = $('<li style="display:none" ></li>');
 
     // Anexar imagem ao novo item da lista
     const novaImagem = $(`<img src="${enderecoDaNovaImagem}" />`);
@@ -32,7 +32,11 @@ $('form').on('submit', function(e){
     // Anexe o novo item da lista à lista não ordenada
     console.log('Novo Item HTML:', novoItem[0].outerHTML);
     novoItem.appendTo('ul');
+    $(novoItem).fadeIn(1000);
+    
+
+
+    $('#endereco-imagem-nova').val('')
 });
 
 
-console.log('Endereco da Nova Imagem:', enderecoDaNovaImagem);
